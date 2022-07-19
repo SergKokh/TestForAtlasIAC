@@ -18,10 +18,10 @@ public class TestInit {
         driver.manage().window().maximize();
     }
 
-    @AfterMethod
-    public void closeBrowser(){
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void closeBrowser(){
+//        driver.quit();
+//    }
 
     public void sleep(int seconds) {
         try {

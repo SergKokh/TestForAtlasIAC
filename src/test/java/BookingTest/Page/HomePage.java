@@ -26,18 +26,20 @@ public class HomePage extends BasePage{
     public WebElement choiceNewYorkCity() {
         return driver.findElement(By.cssSelector("#ss"));
     }
-
-    public void changeLanguage() {
-        HomeBooking homeBooking = new HomeBooking(driver);
-        homeBooking.clickLanguageBtn().click();
-        homeBooking.choiceLanguageEnglish().get(0).click();
-    }
-    public void choiceCity(){
-        HomeBooking homeBooking = new HomeBooking(driver);
-        homeBooking.choiceNewYorkCity().sendKeys("New York\n");
-    }
-
     public WebElement clickSerchBtn() {
         return driver.findElement(By.xpath("//button//span[contains(text(), 'Search')]"));
     }
+
+    public void changeLanguage() {
+        HomePage homePage = new HomePage(driver);
+        homePage.clickLanguageBtn().click();
+        homePage.choiceLanguageEnglish().get(0).click();
+    }
+    public void choiceCity(){
+        HomePage homePage = new HomePage(driver);
+        homePage.choiceNewYorkCity().sendKeys("New York\n");
+    }
+
+
+
 }
