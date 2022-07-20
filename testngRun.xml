@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+  <suite name="Annotations" >
+    <test name="Run Tests Annotations">
+        <classes>
+            <class name="BookingTest.Test.TestStays">
+            </class>
+            <class name="BookingTest.Test.TestRentCar"/>
+
+        </classes>
+
+    </test>
+</suite>
+

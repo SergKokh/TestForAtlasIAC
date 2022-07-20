@@ -11,6 +11,11 @@ import java.util.List;
 
 public class BasePage {
 
+    public static WebDriver driver;
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     private static final Duration BASIC_TIME = Duration.ofSeconds(15);
 
     public List<WebElement> waitVisibilityOfAllElementsLocatedBy(String locator) {
@@ -21,10 +26,4 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, BASIC_TIME);
         return wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     }
-    public static WebDriver driver;
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-
 }
