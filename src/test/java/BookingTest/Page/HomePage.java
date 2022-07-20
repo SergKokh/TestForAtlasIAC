@@ -1,5 +1,6 @@
 package BookingTest.Page;
 
+import BookingTest.Test.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,23 +14,6 @@ public class HomePage extends BasePage{
     public void openBooking(){
         driver.get("https://www.booking.com/");
     }
-
-
-    public WebElement clickLanguageBtn() {
-        return waitElementToBeClickable("//img[@class= 'bui-avatar__image']");
-    }
-
-    public List<WebElement> choiceLanguageEnglish() {
-        return waitVisibilityOfAllElementsLocatedBy("//div[contains(text(), 'English (US)')]");
-    }
-
-    public WebElement choiceNewYorkCity() {
-        return driver.findElement(By.cssSelector("#ss"));
-    }
-    public WebElement clickSerchBtn() {
-        return driver.findElement(By.xpath("//button//span[contains(text(), 'Search')]"));
-    }
-
     public void changeLanguage() {
         HomePage homePage = new HomePage(driver);
         homePage.clickLanguageBtn().click();
@@ -39,7 +23,19 @@ public class HomePage extends BasePage{
         HomePage homePage = new HomePage(driver);
         homePage.choiceNewYorkCity().sendKeys("New York\n");
     }
-
-
-
+    public WebElement clickLanguageBtn() {
+        return waitElementToBeClickable("//img[@class= 'bui-avatar__image']");
+    }
+    public List<WebElement> choiceLanguageEnglish() {
+        return waitVisibilityOfAllElementsLocatedBy("//div[contains(text(), 'English (US)')]");
+    }
+    public WebElement choiceNewYorkCity() {
+        return driver.findElement(By.cssSelector("#ss"));
+    }
+    public WebElement clickSerchBtn() {
+        return driver.findElement(By.xpath("//button//span[contains(text(), 'Search')]"));
+    }
+    public WebElement choiceCarRent() {
+        return driver.findElement(By.xpath("//span[normalize-space()='Car rentals']"));
+    }
 }

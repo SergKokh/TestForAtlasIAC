@@ -11,10 +11,6 @@ public class NewYorkHotelPage extends BasePage {
         super(driver);
     }
 
-    public List<WebElement> hotelInNewYorkOnly() {
-        return driver.findElements(By.xpath("//span[@data-testid= 'address']"));
-    }
-
     public boolean checkHotelInNewYorkOnly() {
         boolean result = false;
         for (WebElement element : hotelInNewYorkOnly()) {
@@ -27,5 +23,8 @@ public class NewYorkHotelPage extends BasePage {
             }
         }
         return result;
+    }
+    public List<WebElement> hotelInNewYorkOnly() {
+        return driver.findElements(By.xpath("//span[@data-testid= 'address']"));
     }
 }

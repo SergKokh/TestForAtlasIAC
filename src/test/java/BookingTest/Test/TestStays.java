@@ -7,10 +7,7 @@ import BookingTest.Page.NewYorkHotelPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-
-public class TestBooking extends TestInit{
-
+public class TestStays extends TestInit{
 
     @Test
     public void checkChoiceNewYorkCity(){
@@ -30,7 +27,6 @@ public class TestBooking extends TestInit{
     public void checkConformityDate(){
         HomePage homePage = new HomePage(driver);
         DatesFieldPage datesField = new DatesFieldPage(driver);
-        NewYorkHotelPage newYorkHotel = new NewYorkHotelPage(driver);
         HotelHomePage hotelHome = new HotelHomePage(driver);
         homePage.openBooking();
         homePage.changeLanguage();
@@ -38,13 +34,9 @@ public class TestBooking extends TestInit{
         homePage.clickSerchBtn().click();
         datesField.changeDate();
         datesField.choiceHotel().get(0).click();
-//        String oldTab = driver.getWindowHandle();
-//        ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
-//        newTab.remove(oldTab);
-//        driver.switchTo().window(newTab.get(0));
-        hotelHome.testSwichTo().click();
+        datesField.changeTab();
 
-        Assert.assertTrue(hotelHome.checkFieldDate().get(0).getText().contains("Thu, Dec 1"));
-        Assert.assertTrue(hotelHome.checkFieldDate().get(1).getText().contains("Sat, Dec 31"));
+        Assert.assertTrue(hotelHome.checkFieldDateIn().getText().contains("Thursday, December 1, 2022"));
+        Assert.assertTrue(hotelHome.checkFieldDateOut().getText().contains("Saturday, December 31, 2022"));
     }
 }
