@@ -23,12 +23,4 @@ public class TestInit {
     public void closeBrowser(){
         driver.quit();
     }
-
-//    public void sleep(int seconds) {
-//        try {
-//            Thread.sleep(seconds * 1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }
