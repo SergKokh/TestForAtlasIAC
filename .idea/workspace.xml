@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c90d7f93-5125-49cf-8b34-20072c7c7511" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingTest/Page/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingTest/Page/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingTest/Page/NewYorkHotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingTest/Page/NewYorkHotelPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingTest/Test/TestInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingTest/Test/TestInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingTest/Test/TestRentCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingTest/Test/TestRentCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingTest/Test/TestStays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingTest/Test/TestStays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +60,25 @@
       <recent name="BookingTest" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG./home/serg/Рабочий стол/AllHardCourse/TestForAtlasIAC/testngRun.xml">
+  <component name="RunManager" selected="TestNG.TestRentCar.checkSelectLocation">
+    <configuration name="TINew.openWebsite" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestForAtlasIAC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BookingTest.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BookingTest.Test" />
+      <option name="MAIN_CLASS_NAME" value="BookingTest.Test.TINew" />
+      <option name="METHOD_NAME" value="openWebsite" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRentCar.checkSelectLocation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestForAtlasIAC" />
       <extension name="coverage">
@@ -122,10 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG./home/serg/Рабочий стол/AllHardCourse/TestForAtlasIAC/testngRun.xml" />
         <item itemvalue="TestNG.TestRentCar.checkSelectLocation" />
-        <item itemvalue="TestNG.TestStays.checkChoiceNewYorkCity" />
+        <item itemvalue="TestNG.TINew.openWebsite" />
         <item itemvalue="TestNG.TestStays.checkConformityDate" />
+        <item itemvalue="TestNG.TestStays.checkChoiceNewYorkCity" />
+        <item itemvalue="TestNG./home/serg/Рабочий стол/AllHardCourse/TestForAtlasIAC/testngRun.xml" />
       </list>
     </recent_temporary>
   </component>

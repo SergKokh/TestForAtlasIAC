@@ -15,8 +15,8 @@ public class RentCarPage extends BasePage{
     public WebElement enterLocation() {
         return waitElementToBeClickable("//input[@id= 'ss_origin']");
     }
-    public List<WebElement> choiceLocation() {
-        return waitVisibilityOfAllElementsLocatedBy("//span[@class= 'search_hl_name']");
+    public WebElement choiceLocation() {
+        return waitVisibilityOfAllElementsLocatedBy("//span[@class= 'search_hl_name']").get(1);
     }
     public WebElement clickSearchBtn() {
         return driver.findElement(By.cssSelector("span.js-sb-submit-text"));

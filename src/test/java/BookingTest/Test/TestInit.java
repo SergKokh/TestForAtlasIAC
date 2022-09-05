@@ -8,15 +8,18 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 public class TestInit {
     public WebDriver driver;
 
     @BeforeMethod
+    @Deprecated
     public void setUp() {
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
+
     }
 
     @AfterMethod
