@@ -13,7 +13,8 @@ public class BasePage {
 
     public static WebDriver driver;
     public BasePage(WebDriver driver) {
-        this.driver = driver;
+       this.driver = driver;
+
     }
 
     private static final Duration BASIC_TIME = Duration.ofSeconds(15);

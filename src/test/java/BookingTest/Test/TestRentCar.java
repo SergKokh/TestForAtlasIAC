@@ -9,15 +9,13 @@ public class TestRentCar extends TestInit{
 
     @Test
     public void checkSelectLocation(){
-        HomePage homePage = new HomePage(driver);
-        RentCarPage rentCarPage = new RentCarPage(driver);
-        homePage.openBooking();
-        homePage.changeLanguage();
-        homePage.choiceCarRent().click();
-        rentCarPage.enterLocation().sendKeys("Kiev");
-        rentCarPage.choiceLocation().get(1).click();
-        rentCarPage.clickSearchBtn().click();
+        new HomePage(driver).openBooking();
+        new HomePage(driver).changeLanguage();
+        new HomePage(driver).choiceCarRent().click();
+        new RentCarPage(driver).enterLocation().sendKeys("Kiev");
+        new RentCarPage(driver).choiceLocation().click();
+        new RentCarPage(driver).clickSearchBtn().click();
 
-        Assert.assertTrue(rentCarPage.checkTableVisible().isDisplayed());
+        Assert.assertTrue(new RentCarPage(driver).checkTableVisible().isDisplayed());
     }
 }

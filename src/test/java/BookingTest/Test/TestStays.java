@@ -8,12 +8,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestStays extends TestInit{
+    HomePage homePage = new HomePage(driver);
+    DatesFieldPage datesField = new DatesFieldPage(driver);
+    NewYorkHotelPage newYorkHotel = new NewYorkHotelPage(driver);
 
     @Test
     public void checkChoiceNewYorkCity(){
-        HomePage homePage = new HomePage(driver);
-        DatesFieldPage datesField = new DatesFieldPage(driver);
-        NewYorkHotelPage newYorkHotel = new NewYorkHotelPage(driver);
         homePage.openBooking();
         homePage.changeLanguage();
         homePage.choiceCity();
@@ -25,10 +25,7 @@ public class TestStays extends TestInit{
 
     @Test
     public void checkConformityDate(){
-        HomePage homePage = new HomePage(driver);
-        DatesFieldPage datesField = new DatesFieldPage(driver);
-        HotelHomePage hotelHome = new HotelHomePage(driver);
-        homePage.openBooking();
+        new HomePage(driver).openBooking();
         homePage.changeLanguage();
         homePage.choiceCity();
         homePage.clickSerchBtn().click();
@@ -36,7 +33,7 @@ public class TestStays extends TestInit{
         datesField.choiceHotel().get(0).click();
         datesField.changeTab();
 
-        Assert.assertTrue(hotelHome.checkFieldDateIn().getText().contains("Thursday, December 1, 2022"));
-        Assert.assertTrue(hotelHome.checkFieldDateOut().getText().contains("Saturday, December 31, 2022"));
+        Assert.assertTrue(new HotelHomePage(driver).checkFieldDateIn().getText().contains("Thursday, December 1, 2022"));
+        Assert.assertTrue(new HotelHomePage(driver).checkFieldDateOut().getText().contains("Saturday, December 31, 2022"));
     }
 }

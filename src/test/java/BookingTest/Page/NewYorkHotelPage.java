@@ -13,8 +13,8 @@ public class NewYorkHotelPage extends BasePage {
 
     public boolean checkHotelInNewYorkOnly() {
         boolean result = false;
-        for (WebElement element : hotelInNewYorkOnly()) {
-            if (element.getText().contains("New York")) {
+        for (WebElement city : hotelInNewYorkOnly()) {
+            if (city.getText().contains("New York")) {
                 result = true;
             }
             else {
